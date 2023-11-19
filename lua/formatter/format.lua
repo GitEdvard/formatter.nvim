@@ -213,7 +213,7 @@ function M.start_task(configs, start_line, end_line, opts)
 
       if opts.write and bufnr == vim.api.nvim_get_current_buf() then
         M.saving_currently = true
-        vim.api.nvim_command "update"
+        vim.api.nvim_command "update!"
         M.saving_currently = false
       end
     else
